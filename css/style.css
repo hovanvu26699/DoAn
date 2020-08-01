@@ -1,5 +1,13 @@
+* input {
+  border-radius: 0.25rem;
+}
+ .menu {
+   height: 70px;
+ }
+
+
 .header {
-    background-color: yellow;
+    background-color: #040404;
 }
 
 .header ul li {
@@ -8,11 +16,14 @@
 
 .header ul li a {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 35px;
+  font-weight: 700;
 }
 
 .header ul li a:hover {
-  color: red;
+  color: #ffe500;
 }
 
 .menu img {
@@ -24,11 +35,40 @@
 }
 .menuFight {
     float: right;
-    margin: 10px;
+    margin: 20px 16px 0 0;
 }
 
-.menuFight i {
-    color: black;
+.menuFight input {
+  height: 23px ;
+  width: 225px ;
+  border: 1px solid #ced4da;
+}
+
+.menuFight .btn {
+  width: 45px;
+  border-radius: 5px;
+}
+
+.menuFight button {
+  border-radius: 5px;
+  height: 30px;
+  width: 95px;
+  background-color: #040404;
+  border-color: #ffffff;
+}
+
+.menuFight button:hover {
+  background-color: #ffffff;
+  color: #040404;
+}
+
+.menuFight .btn:hover {
+  background-color: unset;
+  color: unset;
+}
+
+.menuFight i, .menuFight span, .menuFight button {
+    color: #ffffff;
 }
 
 .mySlides {display: none}
@@ -135,7 +175,6 @@ img {vertical-align: middle;}
 
 .bodyLeft input {
   background-color: #2e91a7;
-  border-radius: 10px;
   color: white;
   padding: 10px;
 }
