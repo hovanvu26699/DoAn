@@ -277,6 +277,12 @@ img {vertical-align: middle;}
   padding: 0.34em;
 }
 
+.bodyRe {
+  margin-top: 2em;
+  text-align: center;
+}
+
+/* css footer */
 .footer {
   clear: both;
   background-color: #f8f8f8;
@@ -370,16 +376,16 @@ img {vertical-align: middle;}
   background-color: #f2f2f2;
 }
 
-.intruc button {
+.intruc button, .bodyRe button {
   background-color: #2c96e6;
   padding: 10px;
 }
 
-.intruc input {
+.intruc input, .bodyRe input {
   padding: 10px;
 }
 
-.intruc button:hover {
+.intruc button:hover,.bodyRe button:hover {
   background-color: #13c7ef;
 }
 
@@ -392,6 +398,30 @@ img {vertical-align: middle;}
   padding: 10px;
   background-color: #f2f2f2;
 }
+.inp {
+  margin-bottom: 1em;
+}
+
+.inp div {
+  margin-top: 0.25em;
+}
+
+.inp span {
+  margin-right: 10px;
+}
+
+.inpfloatL {
+  float: left;
+  margin-left: 23rem;
+}
+
+.inpfloatR {
+  float: left;
+}
+.impB {
+  float: left;
+}
+
 #ThemVaoGio>a{
   text-decoration: none;
   color: black;

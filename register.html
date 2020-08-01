@@ -30,96 +30,99 @@
         </div>
 
     </div>
-    <div class="bodyPro">
+    <div class="bodyRe">
         <form method="post" action="#">
-            <div>
-                <label>Tên đăng nhập</label>
-                <div>
+            <div class="inpfloatL">
+                <div class="inp">
+                    <label>Tên đăng nhập</label>
                     <div>
-                        <span><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                        <input type="text" name="username" id="txtTenDN" placeholder="Nhập tên đăng nhập" required
-                            autofocus />
+                        <div>
+                            <span><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" name="username" id="txtTenDN" placeholder="Nhập tên đăng nhập" required
+                                autofocus />
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div>
-                <label>Mật khẩu</label>
-                <div>
+                <div class="inp">
+                    <label>Mật khẩu</label>
+                    <div>
+                        <div>
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" name="password" id="txtMK" placeholder="Nhập mật khẩu" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inp">
+                    <label>Xác nhận mật khẩu</label>
                     <div>
                         <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                        <input type="password" name="password" id="txtMK" placeholder="Nhập mật khẩu" required />
+                        <input type="password" name="confirm" id="txtXN_MK" placeholder="Xác nhận lại mật khẩu"
+                            required />
                     </div>
                 </div>
-            </div>
 
-            <div>
-                <label>Xác nhận mật khẩu</label>
-                <div>
-                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                    <input type="password" name="confirm" id="txtXN_MK" placeholder="Xác nhận lại mật khẩu" required />
-                </div>
-            </div>
-
-            <div>
-                <label>Họ tên</label>
-                <div>
+                <div class="inp">
+                    <label>Họ tên</label>
                     <div>
-                        <span></span><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                        <input type="text" name="name" id="txtHoTen" placeholder="nhập Họ tên" />
+                        <div>
+                            <span><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" name="name" id="txtHoTen" placeholder="nhập Họ tên" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inp">
+                    <label>Email</label>
+                    <div>
+                        <span><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                        <input type="text" name="email" id="txtEmail" placeholder="Nhập lại Email" required />
+                    </div>
+                </div>
+            </div>
+            <div class="inpfloatR">
+                <div class="inp">
+                    <label>SĐT</label>
+                    <div>
+                        <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <input type="text" name="SĐT" id="txtSDT" placeholder="Nhập lại SĐT" />
+                    </div>
+                </div>
+                <div class="inp">
+                    <label>Địa chỉ</label>
+                    <div>
+                        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <input type="text" name="Địa chỉ" id="txtDC" placeholder="Nhập lại Địa chỉ" />
+                    </div>
+                </div>
+                <div class="inp">
+                    <label>CMND</label>
+                    <div>
+                        <span><i class="fa fa-id-card" aria-hidden="true"></i></span>
+                        <input type="text" name="CMND" id="txtCMND" placeholder="Nhập lại CMND" />
+                    </div>
+                </div>
+                <div class="inp">
+                    <label>Ngày sinh</label>
+                    <div>
+                        <span><i class="fa fa-birthday-cake" aria-hidden="true"></i></span>
+                        <input type="date" name="Ngày sinh" id="txtNS" placeholder="Nhập lại Ngày sinh" required />
+                    </div>
+                </div>
+                <div class="inp">
+                    <label>Ảnh đại diện</label>
+                    <div>
+                        <span><i class="fa fa-picture-o" aria-hidden="true"></i></span>
+                        <input type="file" />
                     </div>
                 </div>
             </div>
 
-            <div>
-                <label>Email</label>
-                <div>
-                    <span><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                    <input type="text" name="email" id="txtEmail" placeholder="Nhập lại Email" required />
-                </div>
+            <div class="impB">
+                <button onclick="DangKy()">Đăng Ký</button>
             </div>
-            <div>
-                <label>SĐT</label>
-                <div>
-                    <span><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                    <input type="text" name="SĐT" id="txtSDT" placeholder="Nhập lại SĐT" />
-                </div>
-            </div>
-            <div>
-                <label>Địa chỉ</label>
-                <div>
-                    <span><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                    <input type="text" name="Địa chỉ" id="txtDC" placeholder="Nhập lại Địa chỉ" />
-                </div>
-            </div>
-            <div>
-                <label>CMND</label>
-                <div>
-                    <span><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                    <input type="text" name="CMND" id="txtCMND" placeholder="Nhập lại CMND" />
-                </div>
-            </div>
-            <div>
-                <label>Ngày sinh</label>
-                <div>
-                    <span><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                    <input type="date" name="Ngày sinh" id="txtNS" placeholder="Nhập lại Ngày sinh" required />
-                </div>
-            </div>
-            <div>
-                <label>Ảnh đại diện</label>
-                <div>
-                    <span><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                    <input type="file" />
-                </div>
-            </div>
-
-    </div>
-
-    <div>
-        <button onclick="DangKy()" class="btn btn-primary btn-lg btn-block login-button">Register</button>
-    </div>
-    </form>
+        </form>
     </div>
     <div class="footer footerRe">
         <div>
