@@ -347,9 +347,9 @@ img {vertical-align: middle;}
 .textH {
   text-align: center;
   font-weight: bolder;
-    font-size: x-large;
-    color: #2c7f97;
-    border-bottom: 1px solid #ced4da;
+  font-size: x-large;
+  color: #2c7f97;
+  border-bottom: 1px solid #ced4da;
 }
 
 .in {
@@ -358,12 +358,16 @@ img {vertical-align: middle;}
 
 .in img {
   float: left;
-      margin-left: 10rem;
+  margin-left: 10rem;
 }
 
 .in .intruc {
   float: left;
   width: 320px;
+   border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #f2f2f2;
 }
 
 .intruc button {
@@ -382,7 +386,11 @@ img {vertical-align: middle;}
 .intrucright {
   float: right;
   width: 240px;
-  margin-right: 12rem;
+  margin-right: 10rem;
+   border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #f2f2f2;
 }
 #ThemVaoGio>a{
   text-decoration: none;
