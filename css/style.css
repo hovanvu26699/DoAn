@@ -187,6 +187,7 @@ img {vertical-align: middle;}
 }
 
 .bodyLeft {
+  background-color: #f0f8ff;
   float: left;
   margin: 2em 0 0 1em;
   border: 1px solid #f0f0f0;
@@ -229,7 +230,7 @@ img {vertical-align: middle;}
 }
 
 .bodyLeft ul li:hover {
-  background-color:#aab1b3; ;
+  background-color:#ffffff; ;
   border-radius: 0.25rem;
   border: 1px solid #ced4da;
 }
@@ -240,7 +241,7 @@ img {vertical-align: middle;}
 }
 
 .bodyLeft ul li a:hover{
-  color: #ffffff;
+  color: #040404;
 }
 
 .bodyRight img {
@@ -259,7 +260,7 @@ img {vertical-align: middle;}
 }
 
 .bodyRight button:hover {
-  background-color: #13c7ef;
+  background-color: #ffffff;
 }
 
 .bodyRight a{
@@ -275,6 +276,10 @@ img {vertical-align: middle;}
   width: 250px;
   border: 1px solid #ced4da;
   padding: 0.34em;
+}
+
+.bodyRight td:hover {
+  background-color: #acccec;
 }
 
 .bodyRe {
