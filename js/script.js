@@ -1,4 +1,5 @@
-var slideIndex = 1;
+//////////////Slide show
+var slideIndex = 0;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -18,12 +19,16 @@ function showSlides(n) {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 5000);
 }
+
 ////// Mua
 var SL = 0;
 function MuaSP() {
@@ -127,4 +132,3 @@ function xoaForm() {
 function HienThiAnh() {
     document.getElementById("imgAnhMinhHoa").src = "img/" + document.getElementById("fileAnh").files[0].name;
 }
-/////////////
