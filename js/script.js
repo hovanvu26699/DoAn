@@ -32,21 +32,35 @@ function MuaSP() {
     document.getElementById("SoLuong").innerHTML = SL;
 }
 
-function MuaHang() {
-    var soLuong = Number(document.getElementById("SoLuong").value);
-    SL += soLuong;
+function ChuyenTrang() {
+    var soL = Number(document.getElementById("SoLuong").value);
+    SL += soL;
     document.getElementById("soLuong").innerHTML = SL;
     alert("Vui lòng đăng kí/đăng nhập để mua hàng");
+    location.assign("http://127.0.0.1:5501/register.html");
 }
-//////////////
+////////////// Đăng Ký
 function DangKy() {
+    var SDT = document.getElementById("txtSDT").value;
     var MatKhau = document.getElementById("txtMK").value;
     var XN_Matkhau = document.getElementById("txtXN_MK").value;
+    var tenDN = document.getElementById("txtTenDN").value;
+    var Email = document.getElementById("txtEmail").value;
     var NS = document.getElementById("txtNS").value;
-    if (MatKhau == XN_Matkhau && GetAge(NS) > 18) {
-        alert("Đăng Nhập Thành Công");
+    if (MatKhau != XN_Matkhau || GetAge(NS) < 18 || tenDN.length == 0 || MatKhau.length == 0 || Email.length == 0 || NS.length == 0 || !kiemTra_SDT(SDT)) {
+        if (MatKhau != XN_Matkhau) {
+            alert("Đăng Ký Thất Bại");
+            document.getElementById("txtXN_MK").focus();
+        }
+        else if (GetAge(NS) < 18) {
+            alert("Đăng Ký Thất Bại: Không đủ 18 tuổi");
+        }
+        else {
+            alert("Đăng Ký Thất Bại");
+        }
     } else {
-        alert("Đăng Nhập Thất Bại");
+        alert("Đăng Ký Thành Công");
+        xoaForm();
     }
 }
 
@@ -59,4 +73,32 @@ function GetAge(NS) {
         age--;
     }
     return age;
+}
+///Xóa form
+function xoaForm() {
+    document.getElementById("txtTenDN").value = "";
+    document.getElementById("txtMK").value = "";
+    document.getElementById("txtXN_MK").value = "";
+    document.getElementById("txtHoTen").value = "";
+    document.getElementById("txtEmail").value = "";
+    document.getElementById("txtSDT").value = "";
+    document.getElementById("txtDC").value = "";
+    document.getElementById("txtCMND").value = "";
+    document.getElementById("txtNS").value = "";
+    document.getElementById("fileAnh").value = "";
+    document.getElementById("imgAnhMinhHoa").src = "";
+    document.getElementById("txtTenDN").focus();
+}
+///////Kiểm tra SDT
+function kiemTra_SDT(n) {
+    if (n.length > 0) {
+        if (n.length < 10 || n.length > 10) {
+            return false;
+        }
+    }
+    return true;
+}
+//////Ảnh
+function HienThiAnh() {
+    document.getElementById("imgAnhMinhHoa").src = "img/" + document.getElementById("fileAnh").files[0].name;
 }
