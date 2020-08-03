@@ -54,17 +54,22 @@ function DangKy() {
     var CMND = document.getElementById("txtCMND").value;
     var Email = document.getElementById("txtEmail").value;
     var NS = document.getElementById("txtNS").value;
-    if (MatKhau != XN_Matkhau || GetAge(NS) < 18 || tenDN.length == 0 || MatKhau.length == 0 || Email.length == 0 || NS.length == 0 || !kiemTra_SDT(SDT) || !kiemTra_CMND(CMND)) {
+    if (MatKhau != XN_Matkhau || GetAge(NS) < 18 || tenDN.length == 0 || MatKhau.length == 0
+        || Email.length == 0 || NS.length == 0 || !kiemTra_SDT(SDT) || !kiemTra_CMND(CMND) || !kiemTra_Email(Email)) {
         if (MatKhau != XN_Matkhau) {
             alert("Đăng Ký Thất Bại");
             document.getElementById("txtXN_MK").focus();
         }
-        else if (GetAge(NS) < 18) {
-            alert("Đăng Ký Thất Bại: Không đủ 18 tuổi");
+        else if (!kiemTra_Email(Email)) {
+            alert("Đăng Ký Thất Bại");
+            document.getElementById("txtEmail").focus();
         }
         else if (!kiemTra_CMND(CMND)) {
             alert("Đăng Ký Thất Bại");
             document.getElementById("txtCMND").focus();
+        }
+        else if (GetAge(NS) < 18) {
+            alert("Đăng Ký Thất Bại: Không đủ 18 tuổi");
         }
         else {
             alert("Đăng Ký Thất Bại");
@@ -112,6 +117,17 @@ function kiemTra_CMND(n) {
         return true;
     }
     return true;
+}
+////// Kiểm tra Email
+function kiemTra_Email(n) {
+    var at = n.indexOf("@");
+    var dot = n.lastIndexOf(".");
+    var space = n.indexOf(" ");
+    if ((at != -1) && (at != 0) && (dot != -1) && (dot > at + 1) && (dot < n.length - 1) && (space == -1)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 ///Xóa form
 function xoaForm() {
