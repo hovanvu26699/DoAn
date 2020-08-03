@@ -204,7 +204,7 @@ img {vertical-align: middle;}
   background-color: #2e91a7;
   color: white;
   padding: 10px;
-  margin-left: 4em;
+  margin: 1em 0 0 4em;
 }
 
 .bodyLeft input:hover {
@@ -418,10 +418,15 @@ img {vertical-align: middle;}
 .inpfloatL {
   float: left;
   margin-left: 23rem;
+  border: 1px solid;
+  padding: 1em;
 }
 
 .inpfloatR {
   float: left;
+  margin-left: 2em;
+  border: 1px solid;
+  padding: 1em;
 }
 .impB {
   float: left;
