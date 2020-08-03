@@ -303,7 +303,7 @@ img {vertical-align: middle;}
 .footerRe  {
   clear: both;
   background-color: #f8f8f8;
-  margin-top: 5em;
+  margin-top: 30em;
 }
 
 .footer a {
@@ -419,7 +419,7 @@ img {vertical-align: middle;}
   float: left;
   margin-left: 23rem;
   border: 1px solid;
-  padding: 1em;
+  padding: 1em 1em 1.6em;;
 }
 
 .inpfloatR {
