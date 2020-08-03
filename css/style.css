@@ -76,13 +76,13 @@
     color: #ffffff;
 }
 
-.mySlides {display: none}
+.slide {display: none}
 
 img {vertical-align: middle;}
 
 
 /* css cho phần Slideshow container trình chiếu */
-.slideshow-container {
+.slideshow {
   max-width: 100%;
   position: relative;
   margin: auto;
