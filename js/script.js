@@ -60,6 +60,10 @@ function DangKy() {
             alert("Đăng Ký Thất Bại");
             document.getElementById("txtXN_MK").focus();
         }
+        else if (MatKhau.length < 8) {
+            alert("Đăng Ký Thất Bại");
+            document.getElementById("txtMK").focus();
+        }
         else if (!kiemTra_Email(Email)) {
             alert("Đăng Ký Thất Bại");
             document.getElementById("txtEmail").focus();
